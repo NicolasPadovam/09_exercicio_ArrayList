@@ -1,10 +1,11 @@
 package Ex1;
 
-public class FormaGeometrica {
+public abstract class FormaGeometrica {
 
     private int coordenadaX;
     private int coordenadaY;
     private double raio;
+    public final double PI = 3.14;
 
 
     public FormaGeometrica(int coordenadaX, int coordenadaY, double raio) {
@@ -13,9 +14,12 @@ public class FormaGeometrica {
         this.raio = raio;
     }
 
+    public abstract double calcularArea();
+
+
     @Override
     public String toString() {
-        String aux = " ";
+        String aux = "";
         aux += "Coordenada X: " + coordenadaX + "\n";
         aux += "Coordenada Y: " + coordenadaY + "\n";
         aux += "Raio: " + raio + "\n";
